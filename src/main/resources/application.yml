@@ -1,0 +1,8 @@
+server:
+  port : 8080
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://adcr:adcrfiap@cluster0.8yzpw.mongodb.net/Pacientes?retryWrites=true&w=majority
+      database: Pacientes
