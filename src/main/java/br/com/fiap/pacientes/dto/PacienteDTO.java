@@ -20,7 +20,7 @@ public class PacienteDTO {
 
     private String telefoneContato;
 
-    private List<String> sintomas;
+    private String sintomas;
 
     private String nome;
 
