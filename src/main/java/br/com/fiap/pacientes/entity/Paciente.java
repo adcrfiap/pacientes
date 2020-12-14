@@ -1,17 +1,14 @@
 package br.com.fiap.pacientes.entity;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
-@Document(collection = "Pacientes")
+@Document(collection = "pacientes")
 public class Paciente {
 
     @Id
@@ -21,14 +18,16 @@ public class Paciente {
 
     private LocalDate dataNascimento;
 
-    private int telefoneContato;
+    private String telefoneContato;
 
-    private String sintomas;
+    private List<String> sintomas;
 
     private String nome;
 
     private LocalDate dataInternacao;
 
     private LocalDate dataAlta;
+
+    private Integer status;
 
 }
